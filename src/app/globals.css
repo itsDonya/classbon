@@ -3,5 +3,9 @@
 @tailwind components;
 
 html {
+  font-family: var(--font-ravi);
+}
+
+:lang(en) {
   font-family: var(--font-figtree);
 }
