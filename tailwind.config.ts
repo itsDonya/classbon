@@ -7,7 +7,7 @@ extend([mixPlugin]);
 // colord
 const generateDarkenColorFrom = (input: string, percentage = 0.07): string =>
   colord(input).darken(percentage).toHex();
-const generateForegroundColorFrom = (input: string, percentage: 0.8): string =>
+const generateForegroundColorFrom = (input: string, percentage = 0.8): string =>
   colord(input)
     .mix(colord(input).isDark() ? "white" : "black", percentage)
     .toHex();
