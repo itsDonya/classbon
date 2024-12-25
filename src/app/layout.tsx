@@ -1,5 +1,9 @@
 import "./globals.css";
 
+// components
+import { Header } from "./_components/header/header";
+import { Footer } from "./_components/footer/footer";
+
 // fonts
 import localFont from "next/font/local";
 import { Figtree } from "next/font/google";
@@ -54,17 +58,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html dir="rtl" className={`${ravi.variable} ${figtree.variable}`}>
-      <body className="antialiased flex flex-col h-screen">
-        <header className="w-full h-16 bg-neutral-200 flex items-center justify-center">
-          <p className="text-xl text-neutral-700 font-bold uppercase">header</p>
-        </header>
-
-        <div className="flex-1 flex">{children}</div>
-
-        <footer className="w-full h-16 bg-neutral-200 flex items-center justify-center">
-          <p className="text-xl text-neutral-700 font-bold uppercase">footer</p>
-        </footer>
+    <html dir="rtl" className={`dark ${ravi.variable} ${figtree.variable}`}>
+      <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-100 dark:text-base-content">
+        <Header />
+        <div className="flex-1 flex justify-center items-center">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
