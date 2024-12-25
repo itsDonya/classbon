@@ -1,8 +1,8 @@
 import "./globals.css";
 
 // components
-import { Header } from "./_components/header/header";
-import { Footer } from "./_components/footer/footer";
+import { Header } from "./_components/header";
+import { Footer } from "./_components/footer";
 
 // fonts
 import localFont from "next/font/local";
