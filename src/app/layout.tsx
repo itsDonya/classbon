@@ -13,21 +13,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" dir="rtl">
       <body className="antialiased flex flex-col h-screen">
         <header className="w-full h-16 bg-neutral-200 flex items-center justify-center">
           <p className="text-xl text-neutral-700 font-bold uppercase">header</p>
         </header>
 
-        <div className="flex-1 flex">
-          <main className="size-full">{children}</main>
-
-          <aside className="w-96 h-full bg-neutral-300 flex items-center justify-center">
-            <p className="text-lg text-neutral-700 font-bold uppercase">
-              sidebar
-            </p>
-          </aside>
-        </div>
+        <div className="flex-1 flex">{children}</div>
 
         <footer className="w-full h-16 bg-neutral-200 flex items-center justify-center">
           <p className="text-xl text-neutral-700 font-bold uppercase">footer</p>
